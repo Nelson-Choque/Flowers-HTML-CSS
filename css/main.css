@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *,
 *::after,
 *::before {
@@ -10,7 +13,13 @@
   --dark-color: #000;
 }
 
+.text-yellow {
+  color: #ffff00 !important;
+}
+
 body {
+  font-family: "Oswald", serif;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -185,7 +194,9 @@ body {
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #6bf0ff;
+  /* iluminacion */
+
+  background-color: #e7d239;
   filter: blur(10vmin);
 }
 .flower__leaf {
@@ -195,8 +206,8 @@ body {
   width: 8vmin;
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #a7ffee;
-  background-image: linear-gradient(to top, #54b8aa, #a7ffee);
+  background-color: #60d037;
+  background-image: linear-gradient(to top, #ffff00, #ffff00);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -216,7 +227,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+  background-image: linear-gradient(to top, #5ed639, #5ed639);
   z-index: 1;
   opacity: 0.8;
 }
@@ -369,7 +380,7 @@ body {
   height: var(--h);
   border-top-right-radius: var(--h);
   border-bottom-left-radius: var(--h);
-  background-image: linear-gradient(to top, rgba(20, 117, 122, 0.4), #39c6d6);
+  background-image: linear-gradient(to top, rgba(20, 117, 122, 0.4), #5ed639);
 }
 .flower__line__leaf--1 {
   transform: rotate(70deg) rotateY(30deg);
@@ -1554,3 +1565,17 @@ body {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
 } /*# sourceMappingURL=main.css.map */
+
+.animation-opacity {
+  opacity: 0;
+  animation: animation-opacity 5s ease-in-out forwards;
+}
+
+@keyframes animation-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
