@@ -23,7 +23,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
@@ -35,7 +35,7 @@ body {
   top: 0;
   transform: translateX(-50%);
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   filter: blur(0.1vmin);
   background-image: radial-gradient(
       ellipse at top,
